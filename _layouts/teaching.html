@@ -1,0 +1,223 @@
+---
+layout: default
+---
+{{ content }}
+
+<!--
+  TEACHING PAGE
+  =============
+  To add a course: edit _data/teaching_data.yml
+  Fields: place (institution key), year, name (course name),
+          degree (student level), description (optional detail)
+
+  To add a new institution: add entries with a new "place" key,
+  then add a matching section below in this layout.
+-->
+
+<style>
+/* ── Teaching page ── */
+.teach-hero {
+  background: linear-gradient(135deg, #f0fdfa 0%, #ecfdf5 100%);
+  border: 1px solid #99f6e4;
+  border-radius: 16px;
+  padding: 1.4rem 1.6rem;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.teach-hero-icon { font-size: 2.5rem; flex-shrink: 0; }
+.teach-hero-text h2 {
+  font-size: 1.4rem; font-weight: 900; color: #0f172a; margin: 0 0 .2rem;
+}
+.teach-hero-text p { font-size: .92rem; color: #475569; margin: 0; }
+
+/* Section */
+.teach-section { margin-bottom: 2.2rem; }
+.teach-inst {
+  display: flex; align-items: flex-start; gap: 1rem;
+  margin-bottom: 1rem;
+}
+.teach-inst-icon {
+  width: 46px; height: 46px; border-radius: 12px;
+  background: linear-gradient(135deg, #0d9488, #0f766e);
+  display: grid; place-items: center; font-size: 1.3rem;
+  flex-shrink: 0; box-shadow: 0 4px 12px rgba(13,148,136,.25);
+}
+.teach-inst-info h3 {
+  font-size: 1.05rem; font-weight: 900; color: #0f172a; margin: 0 0 .1rem;
+}
+.teach-inst-info .teach-period {
+  font-size: .8rem; font-weight: 700; color: #0d9488;
+  background: #f0fdfa; border: 1px solid #99f6e4;
+  padding: .15rem .5rem; border-radius: 999px; display: inline-block;
+}
+.teach-inst-info .teach-loc {
+  font-size: .82rem; color: #64748b; margin-top: .15rem;
+}
+
+/* Course cards grid */
+.teach-courses {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: .75rem;
+  margin-left: 58px;
+}
+.teach-course-card {
+  padding: .85rem 1rem;
+  border-radius: 12px;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 2px 8px rgba(0,0,0,.04);
+  transition: border-color .15s, box-shadow .15s, transform .15s;
+}
+.teach-course-card:hover {
+  border-color: #99f6e4;
+  box-shadow: 0 6px 18px rgba(13,148,136,.08);
+  transform: translateY(-2px);
+}
+.teach-course-name {
+  font-size: .95rem; font-weight: 800; color: #0f172a; margin-bottom: .25rem;
+}
+.teach-course-level {
+  font-size: .8rem; color: #64748b;
+  display: flex; align-items: center; gap: .3rem;
+}
+.teach-course-level::before {
+  content: "🎓"; font-size: .75rem;
+}
+.teach-course-desc {
+  font-size: .82rem; color: #475569; margin-top: .35rem; line-height: 1.5;
+}
+
+/* Stats row */
+.teach-stats {
+  display: flex; flex-wrap: wrap; gap: .75rem;
+  margin: 1.4rem 0;
+}
+.teach-stat {
+  flex: 1; min-width: 120px;
+  padding: .8rem 1rem;
+  border-radius: 12px;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  text-align: center;
+}
+.teach-stat .stat-num {
+  font-size: 1.6rem; font-weight: 900; color: #0d9488; line-height: 1;
+}
+.teach-stat .stat-label {
+  font-size: .78rem; color: #64748b; margin-top: .2rem; font-weight: 600;
+}
+
+/* Philosophy box */
+.teach-philosophy {
+  padding: 1rem 1.2rem;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #f0fdfa, #ecfdf5);
+  border-left: 4px solid #0d9488;
+  margin: 1.5rem 0;
+  font-size: .93rem; color: #334155; line-height: 1.7;
+}
+.teach-philosophy strong { color: #0f766e; }
+
+@media (max-width: 640px) {
+  .teach-courses { margin-left: 0; grid-template-columns: 1fr; }
+  .teach-hero { flex-direction: column; text-align: center; }
+}
+</style>
+
+<div class="teach-hero">
+  <div class="teach-hero-icon">👨‍🏫</div>
+  <div class="teach-hero-text">
+    <h2>Teaching Experience</h2>
+    <p>Courses taught across Computer Science, Engineering, and Language programmes
+       in Bangladesh and China.</p>
+  </div>
+</div>
+
+<!-- Stats -->
+<div class="teach-stats">
+  <div class="teach-stat">
+    <div class="stat-num">3+</div>
+    <div class="stat-label">Years Teaching</div>
+  </div>
+  <div class="teach-stat">
+    <div class="stat-num">5</div>
+    <div class="stat-label">Courses</div>
+  </div>
+  <div class="teach-stat">
+    <div class="stat-num">2</div>
+    <div class="stat-label">Institutions</div>
+  </div>
+  <div class="teach-stat">
+    <div class="stat-num">100+</div>
+    <div class="stat-label">Students</div>
+  </div>
+</div>
+
+<!-- Teaching philosophy -->
+<div class="teach-philosophy">
+  <strong>Teaching philosophy:</strong> Bridging theory and practice —
+  helping students understand not just <em>how</em> but <em>why</em>
+  algorithms and systems work, with hands-on projects grounded in
+  real-world IoT and data challenges.
+</div>
+
+<!-- ── Micro Institute of Technology ── -->
+<div class="teach-section">
+  <div class="teach-inst">
+    <div class="teach-inst-icon">🏫</div>
+    <div class="teach-inst-info">
+      <h3>Micro Institute of Technology</h3>
+      <span class="teach-period">2018 – 2019</span>
+      <div class="teach-loc">📍 Bangladesh</div>
+    </div>
+  </div>
+  <div class="teach-courses">
+    {% for item in site.data.teaching_data %}
+      {% if item.place == "carlos" and item.year == "2018-2019" %}
+      <div class="teach-course-card">
+        <div class="teach-course-name">{{ item.name }}</div>
+        <div class="teach-course-level">{{ item.degree }}</div>
+        {% if item.description and item.description != "" %}
+        <div class="teach-course-desc">{{ item.description }}</div>
+        {% endif %}
+      </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
+
+<!-- ── San Aibin AI Education ── -->
+<div class="teach-section">
+  <div class="teach-inst">
+    <div class="teach-inst-icon">🤖</div>
+    <div class="teach-inst-info">
+      <h3>San Aibin Artificial Intelligence Education</h3>
+      <span class="teach-period">2020 – 2021</span>
+      <div class="teach-loc">📍 China</div>
+    </div>
+  </div>
+  <div class="teach-courses">
+    {% for item in site.data.teaching_data %}
+      {% if item.place == "carlos" and item.year == "2020-2021" %}
+      <div class="teach-course-card">
+        <div class="teach-course-name">{{ item.name }}</div>
+        <div class="teach-course-level">{{ item.degree }}</div>
+        {% if item.description and item.description != "" %}
+        <div class="teach-course-desc">{{ item.description }}</div>
+        {% endif %}
+      </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
+
+<!--
+  HOW TO ADD A NEW INSTITUTION:
+  1. Add entries to _data/teaching_data.yml with a unique "place" key
+  2. Copy the section block above and change the place == "carlos" filter
+     to match your new "place" key
+  3. Update the institution name, period, and location
+-->

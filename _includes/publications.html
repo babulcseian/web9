@@ -1,0 +1,361 @@
+<style>
+/* ── Filter tabs ── */
+.pub-filter-wrap{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.6rem}
+.pub-filter-btn{padding:.45rem .9rem;border-radius:999px;font-size:.85rem;font-weight:700;
+  border:1px solid #e2e8f0;background:#f8fafc;color:#475569;cursor:pointer;transition:all .15s}
+.pub-filter-btn:hover{border-color:#99f6e4;background:#f0fdfa;color:#0f766e}
+.pub-filter-btn.active{background:#0d9488;color:#fff;border-color:#0d9488;
+  box-shadow:0 4px 12px rgba(13,148,136,.25)}
+.pub-count{display:inline-flex;align-items:center;justify-content:center;
+  width:20px;height:20px;border-radius:50%;font-size:.72rem;font-weight:800;
+  background:rgba(255,255,255,.25);margin-left:.3rem;vertical-align:middle}
+.pub-filter-btn:not(.active) .pub-count{background:#e2e8f0;color:#475569}
+
+/* ── Year header ── */
+.pub-year-group{margin-top:1.8rem}
+.pub-year-label{font-size:1.1rem;font-weight:900;color:#1e293b;
+  padding:.4rem 0;border-bottom:2px solid #e2e8f0;margin-bottom:1rem;
+  display:flex;align-items:center;gap:.5rem}
+.pub-year-label::before{content:"";display:inline-block;width:4px;height:1.1rem;
+  border-radius:2px;background:linear-gradient(180deg,#0d9488,#99f6e4)}
+
+/* ── Card ── */
+.pubs-outer{display:grid;gap:1rem}
+.pub-card{display:grid;grid-template-columns:108px 1fr;gap:1rem;
+  padding:1rem 1rem 1rem 1.1rem;border-radius:16px;
+  background:#fff;border:1px solid #e9eef3;
+  box-shadow:0 6px 22px rgba(16,24,40,.05);position:relative;overflow:hidden;
+  transition:transform .18s,box-shadow .18s,border-color .18s}
+.pub-card:hover{transform:translateY(-2px);
+  box-shadow:0 14px 34px rgba(16,24,40,.09);border-color:#c7d2fe}
+.pub-card::before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;
+  background:linear-gradient(180deg,#6366f1,#22d3ee,#f59e0b)}
+
+/* Figure */
+.pub-fig{width:108px;height:108px;border-radius:10px;object-fit:cover;
+  border:1px solid #eef2f7;flex-shrink:0}
+.pub-fig.contain{object-fit:contain}
+.pub-fig-ph{width:108px;height:108px;border-radius:10px;border:1px solid #eef2f7;
+  background:#f8fafc;display:grid;place-items:center;flex-shrink:0}
+
+/* Meta */
+.pub-meta{display:flex;flex-wrap:wrap;align-items:center;gap:.4rem;margin-bottom:.3rem}
+.pub-idx{font-weight:900;color:#475569;font-size:.88rem}
+.pub-badge{font-size:.7rem;padding:.18rem .45rem;border-radius:999px;font-weight:700;
+  border:1px solid #e2e8f0;background:#f8fafc;color:#475569}
+.b-journal{background:linear-gradient(90deg,#ecfeff,#eef2ff);
+  border-color:#dbeafe;color:#1e3a8a}
+.b-conf{background:#fefce8;border-color:#fde68a;color:#713f12}
+.b-book{background:#f5f3ff;border-color:#ddd6fe;color:#4c1d95}
+.b-thesis{background:#f0fdf4;border-color:#bbf7d0;color:#14532d}
+
+/* Content */
+.pub-title{font-size:.98rem;font-weight:800;line-height:1.35;
+  margin:.2rem 0 .3rem;color:#111827;word-wrap:break-word}
+.pub-authors{font-size:.87rem;color:#4b5563;line-height:1.5;word-wrap:break-word}
+.pub-venue{font-size:.87rem;color:#6366f1;font-style:italic;margin-top:.1rem}
+.me-strong{font-weight:900;text-decoration:underline;color:#111827}
+
+/* Buttons */
+.pub-actions{margin-top:.55rem;display:flex;flex-wrap:wrap;gap:.4rem}
+.btn-chip{display:inline-flex;align-items:center;gap:.3rem;padding:.33rem .62rem;
+  border-radius:999px;font-weight:700;font-size:.79rem;border:1px solid transparent;
+  text-decoration:none;cursor:pointer;
+  transition:transform .12s,box-shadow .12s}
+.btn-chip:hover{transform:translateY(-1px);box-shadow:0 5px 10px rgba(0,0,0,.07)}
+.c-doi{background:#ecfeff;border-color:#a5f3fc;color:#075985}
+.c-pdf{background:#eef2ff;border-color:#c7d2fe;color:#3730a3}
+.c-code{background:#f0fdf4;border-color:#86efac;color:#166534}
+.c-slides{background:#fff7ed;border-color:#fdba74;color:#9a3412}
+.c-video{background:#fef2f2;border-color:#fca5a5;color:#991b1b}
+.c-dataset{background:#ecfdf5;border-color:#6ee7b7;color:#065f46}
+.c-cite{background:#f5f3ff;border-color:#ddd6fe;color:#5b21b6}
+
+/* Hidden (filter) */
+.pub-item[hidden]{display:none}
+
+/* ── BibTeX Modal ── */
+.bib-modal{display:none;position:fixed;inset:0;z-index:9999;
+  background:rgba(0,0,0,.55);align-items:center;justify-content:center;padding:1rem}
+.bib-modal.open{display:flex}
+.bib-box{background:#fff;border-radius:16px;padding:1.4rem 1.5rem;
+  max-width:640px;width:100%;box-shadow:0 24px 60px rgba(0,0,0,.2);position:relative}
+.bib-box h4{margin:0 0 .8rem;font-size:1rem;font-weight:800;color:#111}
+.bib-box pre{background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;
+  padding:.9rem;font-size:.8rem;line-height:1.6;overflow-x:auto;
+  white-space:pre;color:#1e293b;margin:0}
+.bib-actions{display:flex;gap:.5rem;margin-top:.8rem}
+.bib-copy-btn{padding:.4rem .9rem;border-radius:999px;font-weight:700;font-size:.82rem;
+  background:#5b21b6;color:#fff;border:none;cursor:pointer}
+.bib-close-btn{padding:.4rem .9rem;border-radius:999px;font-weight:700;font-size:.82rem;
+  background:#f1f5f9;color:#475569;border:none;cursor:pointer}
+.bib-copied{color:#16a34a;font-size:.8rem;font-weight:700;align-self:center}
+
+@media(max-width:640px){
+  .pub-card{grid-template-columns:1fr}
+  .pub-fig,.pub-fig-ph{width:100%;height:130px}
+}
+</style>
+
+<!-- BibTeX Modal -->
+<div class="bib-modal" id="bib-modal" onclick="if(event.target===this)closeBib()">
+  <div class="bib-box">
+    <h4>📋 BibTeX Citation</h4>
+    <pre id="bib-content"></pre>
+    <div class="bib-actions">
+      <button class="bib-copy-btn" onclick="copyBib()">Copy</button>
+      <button class="bib-close-btn" onclick="closeBib()">Close</button>
+      <span class="bib-copied" id="bib-copied" style="display:none">✓ Copied!</span>
+    </div>
+  </div>
+</div>
+
+<script>
+function showBib(key){
+  var el = document.getElementById('bib-'+key);
+  if(!el) return;
+  document.getElementById('bib-content').textContent = el.textContent;
+  document.getElementById('bib-modal').classList.add('open');
+  document.getElementById('bib-copied').style.display='none';
+}
+function closeBib(){
+  document.getElementById('bib-modal').classList.remove('open');
+}
+function copyBib(){
+  var text = document.getElementById('bib-content').textContent;
+  navigator.clipboard.writeText(text).then(function(){
+    var el = document.getElementById('bib-copied');
+    el.style.display='inline';
+    setTimeout(function(){el.style.display='none'},2000);
+  });
+}
+document.addEventListener('keydown',function(e){if(e.key==='Escape')closeBib()});
+
+// Filter tabs
+document.addEventListener('DOMContentLoaded',function(){
+  var btns = document.querySelectorAll('.pub-filter-btn');
+  var items = document.querySelectorAll('.pub-item');
+  btns.forEach(function(btn){
+    btn.addEventListener('click',function(){
+      var filter = this.dataset.filter;
+      btns.forEach(function(b){b.classList.remove('active')});
+      this.classList.add('active');
+      items.forEach(function(item){
+        if(filter==='all'||item.dataset.type===filter){
+          item.removeAttribute('hidden');
+        } else {
+          item.setAttribute('hidden','');
+        }
+      });
+      document.querySelectorAll('.pub-year-group').forEach(function(grp){
+        var visible=grp.querySelectorAll('.pub-item:not([hidden])').length>0;
+        grp.style.display=visible?'':'none';
+      });
+    });
+  });
+});
+</script>
+
+<!-- Filter buttons -->
+<div class="pub-filter-wrap">
+  {% assign jtotal = site.data.publications.journal | size %}
+  {% assign ctotal = site.data.publications.conference | size %}
+  {% assign ttotal = site.data.publications.thesis | size %}
+  {% assign grand_total = jtotal | plus: ctotal | plus: ttotal %}
+  <button class="pub-filter-btn active" data-filter="all" type="button">
+    All <span class="pub-count">{{ grand_total }}</span>
+  </button>
+  <button class="pub-filter-btn" data-filter="journal" type="button">
+    📄 Journals <span class="pub-count">{{ jtotal }}</span>
+  </button>
+  <button class="pub-filter-btn" data-filter="conference" type="button">
+    🎤 Conferences <span class="pub-count">{{ ctotal }}</span>
+  </button>
+  <button class="pub-filter-btn" data-filter="book" type="button">
+    📚 Book Chapters
+  </button>
+  <button class="pub-filter-btn" data-filter="thesis" type="button">
+    🎓 Thesis <span class="pub-count">{{ ttotal }}</span>
+  </button>
+</div>
+
+<div class="pubs-outer">
+
+{% assign all_years = "2025|2024|2023|2022|2021|2020" | split: "|" %}
+
+{% for year in all_years %}
+  {% assign y_str = year %}
+
+  {% comment %} Check if any item for this year exists {% endcomment %}
+  {% assign has_items = false %}
+  {% for item in site.data.publications.journal %}
+    {% assign item_year = item.year | append: "" %}
+    {% if item_year == y_str %}{% assign has_items = true %}{% endif %}
+  {% endfor %}
+  {% for item in site.data.publications.conference %}
+    {% assign item_year = item.year | append: "" %}
+    {% if item_year == y_str %}{% assign has_items = true %}{% endif %}
+  {% endfor %}
+  {% for item in site.data.publications.thesis %}
+    {% assign item_year = item.year | append: "" %}
+    {% if item_year == y_str %}{% assign has_items = true %}{% endif %}
+  {% endfor %}
+
+  {% if has_items %}
+  <div class="pub-year-group">
+    <div class="pub-year-label">{{ year }}</div>
+
+    {% comment %} ── Journals ── {% endcomment %}
+    {% assign jitems = site.data.publications.journal %}
+    {% assign jcount = jitems | size %}
+    {% for item in jitems %}
+      {% assign item_year = item.year | append: "" %}
+      {% if item_year == y_str %}
+      {% assign jnum = jcount | minus: forloop.index0 %}
+      {% comment %} Build BibTeX key from first author surname + year + first title word {% endcomment %}
+      {% assign bkey = item.authors[0].name | split: " " | last | append: year %}
+      <div class="pub-item" data-type="journal">
+        <article class="pub-card" id="J{{ jnum }}">
+          {% if item.figure and item.figure != "" %}
+            <img class="pub-fig{% if item.fit == 'contain' %} contain{% endif %}"
+                 src="{{ item.figure | relative_url }}" alt="figure"
+                 onerror="this.style.display='none';this.nextElementSibling.style.display='grid'">
+            <div class="pub-fig-ph" style="display:none" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" width="40"><path d="M4 5h16v14H4z" stroke="#cbd5e1" stroke-width="1.5"/><path d="M4 15l4-4 5 5 3-3 4 4" stroke="#cbd5e1" stroke-width="1.5"/></svg>
+            </div>
+          {% else %}
+            <div class="pub-fig-ph" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" width="40"><path d="M4 5h16v14H4z" stroke="#cbd5e1" stroke-width="1.5"/><path d="M4 15l4-4 5 5 3-3 4 4" stroke="#cbd5e1" stroke-width="1.5"/></svg>
+            </div>
+          {% endif %}
+          <div>
+            <div class="pub-meta">
+              <span class="pub-idx">[J{{ jnum }}]</span>
+              <span class="pub-badge b-journal">Journal</span>
+              <span class="pub-badge">{{ item.year }}</span>
+            </div>
+            <h5 class="pub-title">{{ item.title }}</h5>
+            <div class="pub-authors">
+              {% for a in item.authors %}{% if forloop.index0 > 0 %}, {% endif %}{% if a.me == "1" %}<span class="me-strong">{{ a.name }}</span>{% else %}{{ a.name }}{% endif %}{% endfor %}
+            </div>
+            {% assign venue = item.journal | default: item.venue %}
+            {% if venue %}<div class="pub-venue">{{ venue }}</div>{% endif %}
+            <div class="pub-actions">
+              {% if item.doi and item.doi != "" %}<a class="btn-chip c-doi" href="{{ item.doi | strip }}" target="_blank" rel="noopener">DOI</a>{% endif %}
+              {% if item.paper and item.paper != "" %}<a class="btn-chip c-pdf" href="{{ item.paper | strip }}" target="_blank" rel="noopener">PDF</a>{% endif %}
+              {% if item.slides and item.slides != "" %}<a class="btn-chip c-slides" href="{{ item.slides }}" target="_blank" rel="noopener">Slides</a>{% endif %}
+              {% if item.videos and item.videos != "" %}<a class="btn-chip c-video" href="{{ item.videos }}" target="_blank" rel="noopener">Video</a>{% endif %}
+              {% if item.code and item.code != "" %}<a class="btn-chip c-code" href="{{ item.code }}" target="_blank" rel="noopener">Code</a>{% endif %}
+              {% if item.dataset and item.dataset != "" %}<a class="btn-chip c-dataset" href="{{ item.dataset }}" target="_blank" rel="noopener">Dataset</a>{% endif %}
+              <button class="btn-chip c-cite" onclick="showBib('{{ bkey }}J{{ jnum }}')">📋 Cite</button>
+            </div>
+          </div>
+        </article>
+        {% comment %} Hidden BibTeX data element {% endcomment %}
+        <pre id="bib-{{ bkey }}J{{ jnum }}" style="display:none">@article{{"{"}}{{ bkey }}J{{ jnum }},
+  author    = {{ "{" }}{% for a in item.authors %}{{ a.name }}{% unless forloop.last %} and {% endunless %}{% endfor %}},
+  title     = {{ "{" }}{{ item.title }}},
+  journal   = {{ "{" }}{{ item.journal | default: item.venue | default: "" }}},
+  year      = {{ "{" }}{{ item.year }}},
+  {% if item.doi and item.doi != "" %}doi       = {{ "{" }}{{ item.doi | strip }}},{% endif %}
+
+}</pre>
+      </div>
+      {% endif %}
+    {% endfor %}
+
+    {% comment %} ── Conferences ── {% endcomment %}
+    {% assign citems = site.data.publications.conference %}
+    {% assign ccount = citems | size %}
+    {% for item in citems %}
+      {% assign item_year = item.year | append: "" %}
+      {% if item_year == y_str %}
+      {% assign cnum = ccount | minus: forloop.index0 %}
+      {% assign bkey = item.authors[0].name | split: " " | last | append: year %}
+      <div class="pub-item" data-type="conference">
+        <article class="pub-card" id="C{{ cnum }}">
+          {% if item.figure and item.figure != "" %}
+            <img class="pub-fig{% if item.fit == 'contain' %} contain{% endif %}"
+                 src="{{ item.figure | relative_url }}" alt="figure"
+                 onerror="this.style.display='none';this.nextElementSibling.style.display='grid'">
+            <div class="pub-fig-ph" style="display:none" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" width="40"><path d="M4 5h16v14H4z" stroke="#cbd5e1" stroke-width="1.5"/><path d="M4 15l4-4 5 5 3-3 4 4" stroke="#cbd5e1" stroke-width="1.5"/></svg>
+            </div>
+          {% else %}
+            <div class="pub-fig-ph" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" width="40"><path d="M4 5h16v14H4z" stroke="#cbd5e1" stroke-width="1.5"/><path d="M4 15l4-4 5 5 3-3 4 4" stroke="#cbd5e1" stroke-width="1.5"/></svg>
+            </div>
+          {% endif %}
+          <div>
+            <div class="pub-meta">
+              <span class="pub-idx">[C{{ cnum }}]</span>
+              <span class="pub-badge b-conf">Conference</span>
+              <span class="pub-badge">{{ item.year }}</span>
+            </div>
+            <h5 class="pub-title">{{ item.title }}</h5>
+            <div class="pub-authors">
+              {% for a in item.authors %}{% if forloop.index0 > 0 %}, {% endif %}{% if a.me == "1" %}<span class="me-strong">{{ a.name }}</span>{% else %}{{ a.name }}{% endif %}{% endfor %}
+            </div>
+            {% assign cvenue = item.venue | default: item.journal | default: item.publisher %}
+            {% if cvenue %}<div class="pub-venue">{{ cvenue }}</div>{% endif %}
+            <div class="pub-actions">
+              {% if item.doi and item.doi != "" %}<a class="btn-chip c-doi" href="{{ item.doi | strip }}" target="_blank" rel="noopener">DOI</a>{% endif %}
+              {% if item.paper and item.paper != "" %}<a class="btn-chip c-pdf" href="{{ item.paper | strip }}" target="_blank" rel="noopener">PDF</a>{% endif %}
+              {% if item.slides and item.slides != "" %}<a class="btn-chip c-slides" href="{{ item.slides }}" target="_blank" rel="noopener">Slides</a>{% endif %}
+              {% if item.videos and item.videos != "" %}<a class="btn-chip c-video" href="{{ item.videos }}" target="_blank" rel="noopener">Video</a>{% endif %}
+              {% if item.code and item.code != "" %}<a class="btn-chip c-code" href="{{ item.code }}" target="_blank" rel="noopener">Code</a>{% endif %}
+              {% if item.dataset and item.dataset != "" %}<a class="btn-chip c-dataset" href="{{ item.dataset }}" target="_blank" rel="noopener">Dataset</a>{% endif %}
+              <button class="btn-chip c-cite" onclick="showBib('{{ bkey }}C{{ cnum }}')">📋 Cite</button>
+            </div>
+          </div>
+        </article>
+        <pre id="bib-{{ bkey }}C{{ cnum }}" style="display:none">@inproceedings{{"{"}}{{ bkey }}C{{ cnum }},
+  author    = {{ "{" }}{% for a in item.authors %}{{ a.name }}{% unless forloop.last %} and {% endunless %}{% endfor %}},
+  title     = {{ "{" }}{{ item.title }}},
+  booktitle = {{ "{" }}{{ item.venue | default: item.journal | default: "" }}},
+  year      = {{ "{" }}{{ item.year }}},
+  {% if item.doi and item.doi != "" %}doi       = {{ "{" }}{{ item.doi | strip }}},{% endif %}
+
+}</pre>
+      </div>
+      {% endif %}
+    {% endfor %}
+
+    {% comment %} ── Thesis ── {% endcomment %}
+    {% for item in site.data.publications.thesis %}
+      {% assign item_year = item.year | append: "" %}
+      {% if item_year == y_str %}
+      <div class="pub-item" data-type="thesis">
+        <article class="pub-card" id="T1">
+          <div class="pub-fig-ph" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" width="40"><path d="M6 7h12M6 11h8M6 15h10" stroke="#cbd5e1" stroke-width="1.5"/></svg>
+          </div>
+          <div>
+            <div class="pub-meta">
+              <span class="pub-idx">[T1]</span>
+              <span class="pub-badge b-thesis">Thesis</span>
+              {% if item.year %}<span class="pub-badge">{{ item.year }}</span>{% endif %}
+            </div>
+            <h5 class="pub-title">{{ item.title }}</h5>
+            {% if item.publisher %}<div class="pub-venue">{{ item.publisher }}</div>{% endif %}
+            <div class="pub-actions">
+              {% if item.doi and item.doi != "" %}<a class="btn-chip c-doi" href="{{ item.doi | strip }}" target="_blank" rel="noopener">DOI</a>{% endif %}
+              {% if item.paper and item.paper != "" %}<a class="btn-chip c-pdf" href="{{ item.paper | strip }}" target="_blank" rel="noopener">PDF</a>{% endif %}
+              <button class="btn-chip c-cite" onclick="showBib('thesisT1')">📋 Cite</button>
+            </div>
+          </div>
+        </article>
+        <pre id="bib-thesisT1" style="display:none">@phdthesis{{"{"}}Islam{{ item.year }},
+  author = {{ "{" }}Md Babul Islam},
+  title  = {{ "{" }}{{ item.title }}},
+  school = {{ "{" }}{{ item.publisher | default: "University of Calabria" }}},
+  year   = {{ "{" }}{{ item.year }}},
+}</pre>
+      </div>
+      {% endif %}
+    {% endfor %}
+
+  </div>
+  {% endif %}
+{% endfor %}
+</div>

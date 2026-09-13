@@ -1,0 +1,674 @@
+journal:
+  - year: 2025
+    title: "Soil Former: A Customized Transformer for Soil Moisture Forecasting in Irish Scenarios (Under Review)"
+    authors:
+      - { name: "Md Babul Islam", me: "1" }
+      - { name: "Antonio Guerrieri" }
+      - { name: "Raffaele Gravina" }
+      - { name: "John Byabazaire" }
+      - { name: "Giancarlo Fortino" }
+      - { name: "Declan T. Delaney" }
+    journal: "IEEE Sensors Journal (Q1)"
+    doi: "https://babulcseian.github.io/soil_sensors_data/"
+    paper: "https://babulcseian.github.io/soil_sensors_data/"
+    code: "https://babulcseian.github.io/soil_sensors_data/"
+    slides: ""
+    videos: ""
+    dataset: "https://babulcseian.github.io/soil_sensors_data/"
+    figure: "/assets/img/paper/journal/Soil-Monitoring-Station.jpg"
+    fit: "contain"
+  - year: 2025
+    title: "Lightweight AI in IoT Applications: A Review of TinyML, TinyDL, and Emerging TinyLLMs (Under Review)"
+    authors:
+      - { name: "Md Babul Islam", me: "1" }
+      - { name: "Antonio Guerrieri and others" }
+    journal: "ACM Computing Surveys (Q1)"
+    doi: ""
+    paper: ""
+    code: ""
+    slides: ""
+    videos: ""
+    dataset: ""
+    figure: "/assets/img/paper/journal/TinyLLM.jpg"
+    fit: "contain"
+
+  - year: 2025
+    title: "iBTEC: A Tiny Deep Learning Approach for Temperature and Occupancy Prediction in Smart Buildings (Under Major Review)"
+    authors:
+      - { name: "Md Babul Islam", me: "1" }
+      - { name: "Qimeng Li" }
+      - { name: "Antonio Guerrieri" }
+      - { name: "Raffaele Gravina" }
+      - { name: "Luigi Rizzo" }
+      - { name: "Giancarlo Fortino" }
+    journal: "Future Generation Computer Systems (Elsevier, Q1)"
+    doi: ""
+    paper: "https://github.com/babulcseian/babulcseian.github.io/blob/main/PhD%20Dataset/readme.md"
+    code: "https://github.com/babulcseian/babulcseian.github.io/blob/main/PhD%20Dataset/readme.md"
+    slides: ""
+    videos: ""
+    dataset: "https://github.com/babulcseian/babulcseian.github.io/blob/main/PhD%20Dataset/readme.md"
+    figure: "/assets/img/paper/journal/ibtec.jpg"
+    fit: "contain"
+
+  - year: 2025
+    title: "ATM-SB: An Indoor Temperature Prediction Approach for Smart Buildings Based on Deep Learning (Under Minor Review)"
+    authors:
+      - { name: "Md Babul Islam", me: "1" }
+      - { name: "Antonio Guerrieri" }
+      - { name: "Raffaele Gravina" }
+      - { name: "Luigi Rizzo" }
+      - { name: "Giuseppe Scopelliti" }
+      - { name: "Vincenzo D Agostino" }
+      - { name: "Giancarlo Fortino" }
+    journal: "Future Generation Computer Systems (Elsevier, Q1)"
+    doi: ""
+    paper: "https://github.com/babulcseian/babulcseian.github.io/blob/main/PhD%20Dataset/readme.md"
+    code: "https://github.com/babulcseian/babulcseian.github.io/blob/main/PhD%20Dataset/readme.md"
+    slides: ""
+    videos: ""
+    dataset: "https://github.com/babulcseian/babulcseian.github.io/blob/main/PhD%20Dataset/readme.md"
+    figure: "/assets/img/paper/journal/Omnia-Dataset.png"
+    fit: "contain"
+
+  - year: 2025
+    title: "From Traditional Machine Learning to Fine-Tuning Large Language Models: A Review for Sensors-Based Soil Moisture Forecasting"
+    authors:
+      - { name: "Md Babul Islam", me: "1" }
+      - { name: "Antonio Guerrieri" }
+      - { name: "Raffaele Gravina" }
+      - { name: "Declan T. Delaney" }
+      - { name: "Giancarlo Fortino" }
+    journal: "MDPI Sensors"
+    doi: "https://doi.org/10.3390/s25226903"
+    paper: "https://doi.org/10.3390/s25226903"
+    # code: ""
+    # slides: ""
+    # videos: ""
+    # dataset: ""
+    figure: "/assets/img/paper/journal/prisma.jpg"
+    fit: "contain"
+
+  
+    
+  - year: 2025
+    title: "ViT-SENet-Tom: machine learning based novel hybrid squeeze excitation network and vision transformer framework for tomato fruits classification"
+    authors:
+      - { name: "S M Masfequier Rahman Swapno" }
+      - { name: "S. M. Nuruzzaman Nobel" }
+      - { name: "Md Babul Islam", me: "1" }
+      - { name: "Pronaya Bhattachary" }
+      - { name: "Ebrahim A. Mattar" }
+    journal: "Neural Computing and Applications (Q1)"
+    doi: "https://doi.org/10.1007/s00521-025-10973-5"
+    paper: "https://link.springer.com/article/10.1007/s00521-025-10973-5"
+    code: "https://www.kaggle.com/datasets/nexuswho/tomatofruits"
+    slides: ""
+    videos: ""
+    dataset: "https://www.kaggle.com/datasets/nexuswho/tomatofruits"
+    figure: "/assets/img/paper/journal/tom.png"
+    fit: "contain"
+
+  - year: 2025
+    title: "A Novel Mixed Convolution Transformer Model for the Fast and Accurate Diagnosis of Glioma Subtypes"
+    authors:
+      - { name: "S M Masfequier Rahman Swapno" }
+      - { name: "S. M. Nuruzzaman Nobel" }
+      - { name: "Md Babul Islam", me: "1" }
+      - { name: "AKM Azad" }
+      - { name: "Salem A. Alyami" }
+      - { name: "Md Alamin" }
+      - { name: "Pietro Liò" }
+      - { name: "Mohammad Ali Moni" }
+    journal: "Neural Computing and Applications (Q1)"
+    doi: "https://doi.org/10.1002/aisy.202400566"
+    paper: "https://advanced.onlinelibrary.wiley.com/doi/full/10.1002/aisy.202400566"
+    code: ""
+    slides: ""
+    videos: ""
+    dataset: ""
+    figure: "/assets/img/paper/journal/glioma.png"
+    fit: "contain"
+
+  - year: 2024
+    title: "Securing electric vehicle performance: Machine learning-driven fault detection and classification"
+    authors:
+      - { name: "Mahbub Ul Islam Khan" }
+      - { name: "Md Ilius Hasan Pathan" }
+      - { name: "Mohammad Mominur Rahman" }
+      - { name: "Md Maidul Islam" }
+      - { name: "Mohammed Arfat Raihan Chowdhury" }
+      - { name: "Md Shamim Anower" }
+      - { name: "Md Masud Rana" }
+      - { name: "Md Shafiul Alam" }
+      - { name: "Mahmudul Hasan" }
+      - { name: "Md Shohanur Islam Sobuj" }
+      - { name: "Md Babul Islam", me: "1" }
+      - { name: "Veerpratap Meena" }
+      - { name: "Francesco Benedetto" }
+    journal: "IEEE Access (Q1)"
+    doi: "https://ieeexplore.ieee.org/abstract/document/10530324"
+    paper: "https://ieeexplore.ieee.org/abstract/document/10530324"
+    code: ""
+    slides: ""
+    videos: ""
+    dataset: ""
+    figure: "/assets/img/paper/journal/fault-ditection.jpg"
+    fit: "contain"
+
+  - year: 2024
+    title: "A Meta-Survey on Intelligent Energy-Efficient Buildings"
+    authors:
+      - { name: "Md Babul Islam", me: "1" }
+      - { name: "Antonio Guerrieri" }
+      - { name: "Raffaele Gravina" }
+      - { name: "Giancarlo Fortino" }
+    journal: "Big Data and Cognitive Computing (Q1)"
+    doi: "https://doi.org/10.3390/bdcc8080083"
+    paper: "https://your-site.com/papers/J7.pdf"
+    code: ""
+    slides: ""
+    videos: ""
+    dataset: ""
+    figure: "/assets/img/IEEBS.png"
+    fit: "contain"
+
+conference:
+  - year: 2025
+    title: "iTempDT: AI-Powered Digital Twin for Forecasting Indoor Temperature in Smart Buildings"
+    authors:
+      - { name: "Md Babul Islam", me: "1" }
+      - { name: "Antonio Guerrieri" }
+      - { name: "Raffaele Gravina" }
+      - { name: "Luigi Pontieri" }
+      - { name: "Luigi Rizzo" }
+      - { name: "Francesco Scala" }
+      - { name: "Andrea Vinci" }
+      - { name: "Giancarlo Fortino" }
+    journal: "23rd IEEE International Conference on Pervasive Intelligence and Computing (PICom 2025)"
+    paper: ""
+    code: ""
+    slides: ""
+    videos: ""
+    dataset: ""
+    figure: "/assets/img/paper/conf/Accepted.jpg"
+    fit: "contain"
+
+  - year: 2025
+    title: "Modeling the Edge-Cloud Continuum: a Brain-Computer Interface Case Study"
+    authors:
+      - { name: "Luigi Rizzo" }
+      - { name: "Paolo Zicari" }
+      - { name: "Raffaele Gravina" }
+      - { name: "Franco Cicirelli" }
+      - { name: "Md Babul Islam", me: "1" }
+      - { name: "Claudio Savaglio" }
+      - { name: "Andrea Vinci" }
+    journal: "IEEE International Conference on Human-Machine Systems (2025 Dubai)"
+    paper: "https://ieeexplore.ieee.org/abstract/document/11154169"
+    code: "https://ieeexplore.ieee.org/abstract/document/11154169"
+    slides: "https://ieeexplore.ieee.org/abstract/document/11154169"
+    # videos: ""
+    # dataset: ""
+    figure: "/assets/img/paper/conf/edge-cloud.jpg"
+    fit: "contain"
+
+  - year: 2024
+    title: "A Deep Learning Based Digital Twin for Indoor Temperature Prediction in Smart Buildings"
+    authors:
+      - { name: "Md Babul Islam", me: "1" }
+      - { name: "Antonio Guerrieri" }
+      - { name: "Raffaele Gravina" }
+      - { name: "Luigi Rizzo" }
+      - { name: "Scopelliti Giuseppe" }
+      - { name: "D Agostino, Vincenzo" }
+      - { name: "Giancarlo Fortino" }
+    journal: "22nd IEEE International Conference on Pervasive Intelligence and Computing (PICom 2024)"
+    paper: "https://ieeexplore.ieee.org/abstract/document/10795414/"
+    code: "https://ieeexplore.ieee.org/abstract/document/10795414/"
+    slides: ""
+    videos: ""
+    dataset: ""
+    figure: "/assets/img/paper/conf/DT4TP.jpg"
+    fit: "contain"
+
+  - year: 2023
+    title: "A Review on Machine Learning for Thermal Comfort and Energy Efficiency in Smart Buildings."
+    authors:
+      - { name: "Md Babul Islam", me: "1" }
+      - { name: "Antonio Guerrieri" }
+      - { name: "Raffaele Gravina" }
+      - { name: "Luigi Rizzo" }
+      - { name: "Scopelliti Giuseppe" }
+      - { name: "D Agostino, Vincenzo" }
+      - { name: "Giancarlo Fortino" }
+    journal: "Proceedings of the 2023 INTERNATIONAL CONFERENCE ON EMBEDDED WIRELESS SYSTEMS AND NETWORKS, EWSN 23"
+    paper: "https://dl.acm.org/doi/10.5555/3639940.3639971"
+    code: "https://dl.acm.org/doi/10.5555/3639940.363997"
+    slides: ""
+    videos: ""
+    dataset: ""
+    figure: "/assets/img/paper/conf/SB-review.jpg"
+    fit: "contain"
+
+  - year: 2023
+    title: "A transfer learning-based computer-aided lung cancer detection system in smart healthcare"
+    authors:
+      - { name: "Rezaul Haque" }
+      - { name: "Shyama Sultana" }
+      - { name: "Al Rafy" }
+      - { name: "Md Babul Islam", me: "1" }
+      - { name: "Masum Alam Arafat" }
+      - { name: "Pronaya Bhattacharya" }
+      - { name: "Pushan Kumar Dutta" }
+    journal: "8th IET Smart Cities Symposium (SCS 2024)"
+    paper: "https://ieeexplore.ieee.org/abstract/document/10949445"
+    code: ""
+    slides: ""
+    videos: ""
+    dataset: ""
+    figure: "/assets/img/paper/conf/lunc-cancer.png"
+    fit: "contain"
+
+
+  - year: 2024
+    title: "Hybrid CNN-LSTM Approach for Sentiment Analysis of Bengali Language Comments on Facebook"
+    authors:
+      - { name: "S. M. Nuruzzaman Nobel" }
+      - { name: "S. M. Masfequier Rahman Swapno" }
+      - { name: "Hasibul Hossain Shajeeb" }
+      - { name: "Md Babul Islam", me: "1" }
+      - { name: "Rezaul Haque" }
+    journal: "Proceedings of the 2024 International Conference on Integrated Circuits and Communication Systems (ICICACS)"
+    paper: "https://ieeexplore.ieee.org/document/10498636"
+    code: "https://ieeexplore.ieee.org/document/10498636"
+    slides: ""
+    videos: ""
+    dataset: ""
+    figure: "/assets/img/paper/conf/lstm-cnn.jpg"
+    fit: "contain"
+
+  - year: 2024
+    title: "IoT-enabled Smart Manhole Management System for Real-time Status, Water Level, and Gas Detection"
+    authors:
+      - { name: "Md Asif Imran" }
+      - { name: "S. M. Masfequier Rahman Swapno" }
+      - { name: "Gunjan Chhabra" }
+      - { name: "Keshav Kaushik" }
+      - { name: "Md Arif Anzum Mahi" }
+      - { name: "Md Babul Islam", me: "1" }
+      - { name: "Rezaul Haque" }
+    journal: "Proceedings of the 2024 International Conference on Intelligent Systems for Cybersecurity (ISCS)"
+    paper: "https://ieeexplore.ieee.org/document/10581265"
+    code: "https://ieeexplore.ieee.org/document/10581265"
+    # slides: ""
+    # videos: ""
+    # dataset: ""
+    figure: "/assets/img/paper/conf/Smart-Manhole.jpg"
+    fit: "contain"
+
+  - year: 2024
+    title: "A Review of Machine Learning Methods for IoT Network-Centric Anomaly Detection"
+    authors:
+      - { name: "Anindya Nag" }
+      - { name: "Md Mehedi Hassan" }
+      - { name: "Dishari Mandal" }
+      - { name: "Nisarga Chand" }
+      - { name: "Md Babul Islam", me: "1" }
+      - { name: "V. P. Meena" }
+      - { name: "Francesco Benedetto" }
+    journal: "Proceedings of the 47th International Conference on Telecommunications and Signal Processing (TSP 2024)"
+    paper: "https://ieeexplore.ieee.org/document/10605928"
+    code: ""
+    # slides: ""
+    # videos: ""
+    # dataset: ""
+    figure: "/assets/img/paper/conf/11.jpg"
+    fit: "contain"
+
+  - year: 2024
+    title: "Performance Improvements of Machine Learning-based Crime Prediction: A Case Study in Bangladesh"
+    authors:
+      - { name: "S. M. Nuruzzaman Nobel" }
+      - { name: "S. M. Masfequier Rahman Swapno" }
+      - { name: "Md Babul Islam", me: "1" }
+      - { name: "V. P. Meena" }
+      - { name: "Francesco Benedetto" }
+    journal: "Proceedings of the 2024 IEEE 3rd International Conference on Computing and Machine Intelligence (ICMI)"
+    paper: "https://ieeexplore.ieee.org/document/10586146"
+    code: "https://ieeexplore.ieee.org/document/10586146"
+    slides: ""
+    videos: ""
+    dataset: ""
+    figure: "/assets/img/paper/conf/crime-prediction.jpg"
+    fit: "contain"
+
+  - year: 2024
+    title: "A Novel Machine Learning Approach for Fast and Efficient Detection of Mango Leaf Diseases"
+    authors:
+      - { name: "S. M. Masfequier Rahman Swapno" }
+      - { name: "S. M. Nuruzzaman Nobel" }
+      - { name: "Md Babul Islam", me: "1" }
+      - { name: "Rezaul Haque" }
+      - { name: "V. P. Meena" }
+      - { name: "Francesco Benedetto" }
+    journal: "Proceedings of the 2024 IEEE 3rd International Conference on Computing and Machine Intelligence (ICMI)"
+    paper: "https://ieeexplore.ieee.org/document/10585939"
+    code: "https://ieeexplore.ieee.org/document/10585939"
+    slides: ""
+    videos: ""
+    dataset: ""
+    figure: "/assets/img/paper/conf/mago-leaf.jpg"
+    fit: "contain"
+
+  - year: 2023
+    title: "Bangladeshi Traffic Sign Recognition and Classification Using CNN with Different Kinds of Transfer Learning Through a New (BTSRB) Dataset"
+    authors:
+      - { name: "Md Abu Sayeed" }
+      - { name: "Md Saiful Islam" }
+      - { name: "Md Babul Islam", me: "1" }
+      - { name: "Piyush Kumar Pareek" }
+      - { name: "Tanbin Islam Rohan" }
+    journal: "Proceedings of the 2023 International Conference on Distributed Computing and Electrical Circuits and Electronics (ICDCECE)"
+    paper: "https://ieeexplore.ieee.org/document/10151254"
+    code: "https://ieeexplore.ieee.org/document/10151254"
+    # slides: ""
+    # videos: ""
+    dataset: "https://ieeexplore.ieee.org/document/10151254"
+    figure: "/assets/img/paper/journal/BTSRB.jpg"
+    fit: "contain"
+
+  - year: 2023
+    title: "Improving Drug Review Categorization Using Sentiment Analysis and Machine Learning"
+    authors:
+      - { name: "Rezaul Haque" }
+      - { name: "Piyush Kumar Pareek" }
+      - { name: "Md Babul Islam", me: "1" }
+      - { name: "Ferdaus Ibne Aziz" }
+      - { name: "Swakshar Das Amarth" }
+      - { name: "Katura Gania Khushbu" }
+    journal: "Proceedings of the 2023 International Conference on Data Science and Network Security (ICDSNS)"
+    paper: "https://ieeexplore.ieee.org/document/10245841"
+    code: "https://ieeexplore.ieee.org/document/10245841"
+    # slides: ""
+    # videos: ""
+    dataset: "https://ieeexplore.ieee.org/document/10245841"
+    figure: "/assets/img/paper/journal/drug-cata.jpg"
+    fit: "contain"
+
+  - year: 2023
+    title: "Deep Learning for Multi-labeled Cyberbully Detection: Enhancing Online Safety"
+    authors:
+      - { name: "Naimul Islam" }
+      - { name: "Rezaul Haque" }
+      - { name: "Piyush Kumar Pareek" }
+      - { name: "Md Babul Islam", me: "1" }
+      - { name: "Imam Hossain Sajeeb" }
+      - { name: "Mahedi Hassan Ratul" }
+    journal: "Proceedings of the 2023 International Conference on Data Science and Network Security (ICDSNS)"
+    paper: "https://ieeexplore.ieee.org/document/10245135"
+    code: "https://ieeexplore.ieee.org/document/10245135"
+    slides: ""
+    videos: ""
+    dataset: "https://ieeexplore.ieee.org/document/10245135"
+    figure: "/assets/img/paper/journal/cyberbully.jpg"
+    fit: "contain"
+
+  - year: 2023
+    title: "Diet and Food Restaurant in the COVID-19 Time by Machine Learning Approaches"
+    authors:
+      - { name: "Md Babul Islam", me: "1" }
+      - { name: "Hasibunnahar Swarna" }
+      - { name: "Piyush Kumar Shukla" }
+      - { name: "Prashant Kumar Shukla" }
+      - { name: "Paresh Rawat" }
+    journal: "Computational Intelligence for Modern Business Systems: Emerging Applications and Strategies"
+    paper: "https://link.springer.com/chapter/10.1007/978-981-99-5354-7_22"
+    code: "https://link.springer.com/chapter/10.1007/978-981-99-5354-7_22"
+    slides: ""
+    videos: ""
+    dataset: ""
+    figure: "/assets/img/paper/journal/diet.jpg"
+    fit: "contain"
+
+  - year: 2023
+    title: "Deep Learning-based Left Ventricular Ejection Fraction Estimation from Echocardiographic Videos"
+    authors:
+      - { name: "Shafiur Rahman" }
+      - { name: "Rezaul Haque" }
+      - { name: "S. M. Masfequier Rahman Swapno" }
+      - { name: "Md Babul Islam", me: "1" }
+      - { name: "S. M. Nuruzzaman Nobel" }
+    journal: "Proceedings of the 2023 International Conference on Evolutionary Algorithms and Soft Computing Techniques (EASCT)"
+    paper: "https://ieeexplore.ieee.org/document/10392607"
+    code: "https://ieeexplore.ieee.org/document/10392607"
+    slides: ""
+    videos: ""
+    dataset: "https://ieeexplore.ieee.org/document/10392607"
+    figure: "/assets/img/paper/conf/DL.jpg"
+    fit: "contain"
+
+  - year: 2023
+    title: "Scientific Article Classification: Harnessing Hybrid Deep Learning Models for Knowledge Discovery"
+    authors:
+      - { name: "Rezaul Haque" }
+      - { name: "B. D. Parameshachari" }
+      - { name: "Md Kamrul Hasan" }
+      - { name: "Ahsanul Hoque Sakib" }
+      - { name: "Awan Ur Rahman" }
+      - { name: "Md Babul Islam", me: "1" }
+    journal: "Proceedings of the 2023 International Conference on Ambient Intelligence, Knowledge Informatics and Industrial Electronics (AIKIIE)"
+    paper: "https://ieeexplore.ieee.org/document/10389945"
+    code: "https://ieeexplore.ieee.org/document/10389945"
+    slides: ""
+    videos: ""
+    dataset: "https://ieeexplore.ieee.org/document/10389945"
+    figure: "/assets/img/paper/conf/hariseness.jpg"
+    fit: "contain"
+
+  - year: 2023
+    title: "Bengali Emotion Classification Using Hybrid Deep Neural Network"
+    authors:
+      - { name: "Rezaul Haque" }
+      - { name: "Md Babul Islam", me: "1" }
+      - { name: "Katura Gania Khushbu" }
+      - { name: "Shafiur Rahman" }
+      - { name: "Awan Ur Rahman" }
+      - { name: "Md Helal Hossen" }
+      - { name: "Tanbin Islam Rohan" }
+    journal: "Proceedings of the 2023 International Conference on Ambient Intelligence, Knowledge Informatics and Industrial Electronics (AIKIIE)"
+    paper: "https://ieeexplore.ieee.org/document/10389834"
+    code: "https://ieeexplore.ieee.org/document/10389834"
+    slides: ""
+    videos: ""
+    dataset: "https://ieeexplore.ieee.org/document/10389834"
+    figure: "/assets/img/paper/conf/bengali-emotion.jpg"
+    fit: "contain"
+
+  - year: 2023
+    title: "An Adaptive Traffic Signal Management System Incorporating Reinforcement Learning"
+    authors:
+      - { name: "S. M. Masfequier Rahman Swapno" }
+      - { name: "Gunjan Chhabra" }
+      - { name: "Keshav Kaushik" }
+      - { name: "S. M. Nuruzzaman Nobel" }
+      - { name: "Md Babul Islam", me: "1" }
+      - { name: "Md Shahiduzzaman" }
+    journal: "Proceedings of the 2023 Annual International Conference on Emerging Research Areas: International Conference on Intelligent Systems (AICERA/ICIS)"
+    paper: "https://ieeexplore.ieee.org/document/10420185"
+    code: "https://ieeexplore.ieee.org/document/10420185"
+    slides: ""
+    videos: ""
+    dataset: "https://ieeexplore.ieee.org/document/10420185"
+    figure: "/assets/img/paper/conf/RL.jpg"
+    fit: "contain"
+
+  - year: 2023
+    title: "Alzheimer Disease Classification Using Deep Neural Network"
+    authors:
+      - { name: "Rezaul Haque" }
+      - { name: "Md Babul Islam", me: "1" }
+      - { name: "Gunjan Chhabra" }
+      - { name: "Smita Sharma" }
+      - { name: "Keshav Kaushik" }
+      - { name: "Md Delwar Hosen" }
+      - { name: "Riyadot Hossain Dip" }
+    journal: "Proceedings of the 2023 10th IEEE Uttar Pradesh Section International Conference on Electrical, Electronics and Computer Engineering (UPCON)"
+    paper: "https://ieeexplore.ieee.org/document/10434852"
+    code: "https://ieeexplore.ieee.org/document/10434852"
+    slides: ""
+    videos: ""
+    dataset: "https://ieeexplore.ieee.org/document/10434852"
+    figure: "/assets/img/paper/conf/alzimer.jpg"
+    fit: "contain"
+
+  - year: 2023
+    title: "Comparative Analysis of Epileptic Seizure Prediction: Exploring Diverse Pre-processing Techniques and Machine Learning Models"
+    authors:
+      - { name: "Md Simul Hasan Talukder" }
+      - { name: "Rejwan Bin Sulaiman" }
+      - { name: "Gunjan Chhabra" }
+      - { name: "Suman Avdhesh Yadav" }
+      - { name: "Rezaul Haque" }
+      - { name: "Md Babul Islam", me: "1" }
+      - { name: "Keshav Kaushik" }
+    journal: "Proceedings of the 2023 10th IEEE Uttar Pradesh Section International Conference on Electrical, Electronics and Computer Engineering (UPCON)"
+    paper: "https://ieeexplore.ieee.org/document/10434289"
+    code: "https://ieeexplore.ieee.org/document/10434289"
+    slides: ""
+    videos: ""
+    dataset: "https://ieeexplore.ieee.org/document/10434289"
+    figure: "/assets/img/paper/conf/eli.jpg"
+    fit: "contain"
+
+  - year: 2023
+    title: "Deep Learning Based Tuberculosis and Pneumonia Disease Detection Using CNN"
+    authors:
+      - { name: "Basitur Rahman Bappi" }
+      - { name: "S. M. Masfequier Rahman Swapno" }
+      - { name: "Gunjan Chhabra" }
+      - { name: "Keshav Kaushik" }
+      - { name: "S. M. Nuruzzaman Nobel" }
+      - { name: "Md Babul Islam", me: "1" }
+    journal: "Proceedings of the 2023 Seventh International Conference on Image Information Processing (ICIIP)"
+    paper: "https://ieeexplore.ieee.org/document/10537686"
+    code: "https://ieeexplore.ieee.org/document/10537686"
+    # slides: ""
+    # videos: ""
+    dataset: "https://ieeexplore.ieee.org/document/10537686"
+    figure: "/assets/img/paper/conf/pnu.jpg"
+    fit: "contain"
+
+  - year: 2023
+    title: "Traffic Light Control Using Reinforcement Learning"
+    authors:
+      - { name: "Basitur Rahman Bappi" }
+      - { name: "S. M. Masfequier Rahman Swapno" }
+      - { name: "Ramachandra A C" }
+      - { name: "Keshav Kaushik" }
+      - { name: "Md Babul Islam", me: "1" }
+      - { name: "Rezaul Haque" }
+      - { name: "Mohammad Mominur Rahman" }
+    journal: "Integrated Circuits and Communication Systems (ICICACS), IEEE International Conference"
+    paper: "https://ieeexplore.ieee.org/abstract/document/10498933"
+    code: ""
+    slides: ""
+    videos: ""
+    dataset: ""
+    figure: "/assets/img/paper/conf/RL.jpg"
+    fit: "contain"
+
+  - year: 2023
+    title: "Classroom Activity Classification with Deep Learning"
+    authors:
+      - { name: "Abdullah Al-Sakib" }
+      - { name: "Fahadul Islam" }
+      - { name: "Ramachandra A C" }
+      - { name: "Keshav Kaushik" }
+      - { name: "Md Babul Islam", me: "1" }
+      - { name: "Ayesha Siddiqua" }
+      - { name: "Mohammad Mominur Rahman" }
+    journal: "Integrated Circuits and Communication Systems (ICICACS)"
+    paper: "https://ieeexplore.ieee.org/document/10498187"
+    code: "https://ieeexplore.ieee.org/document/10498187"
+    slides: ""
+    videos: ""
+    dataset: "https://ieeexplore.ieee.org/document/10498187"
+    figure: "/assets/img/paper/conf/classroom.jpg"
+    fit: "contain"
+
+  - year: 2022
+    title: "Cost Reduce: Credit Card Fraud Identification Using Machine Learning"
+    authors:
+      - { name: "Md Babul Islam", me: "1" }
+      - { name: "Christian Avornu" }
+      - { name: "Piyush Kumar Shukla" }
+      - { name: "Prashant Kumar Shukla" }
+    journal: "Proceedings of the 2022 7th International Conference on Communication and Electronics Systems (ICCES)"
+    paper: "https://ieeexplore.ieee.org/document/9835811"
+    code: "https://ieeexplore.ieee.org/document/9835811"
+    slides: ""
+    videos: ""
+    dataset: "https://ieeexplore.ieee.org/document/9835811"
+    figure: "/assets/img/paper/conf/fraud.jpg"
+    fit: "contain"
+
+  - year: 2022
+    title: "Detect Deception on Banking Credit Card Payment System by Machine Learning Classifiers"
+    authors:
+      - { name: "Md Babul Islam", me: "1" }
+      - { name: "Khandaker Sajidul Islam" }
+      - { name: "Md Helal Khan" }
+      - { name: "Abdullah M. M. A. Al Omari" }
+      - { name: "Hasibunnahar Swarna" }
+    journal: "Proceedings of the Second International Conference on Cloud Computing and Mechatronic Engineering (I3CME 2022)"
+    paper: "https://www.spiedigitallibrary.org/conference-proceedings-of-spie/12339/1233927/Detect-deception-on-banking-credit-card-payment-system-by-machine/10.1117/12.2655113.short"
+    code: "https://www.spiedigitallibrary.org/conference-proceedings-of-spie/12339/1233927/Detect-deception-on-banking-credit-card-payment-system-by-machine/10.1117/12.2655113.short"
+    slides: ""
+    videos: ""
+    dataset: "https://www.spiedigitallibrary.org/conference-proceedings-of-spie/12339/1233927/Detect-deception-on-banking-credit-card-payment-system-by-machine/10.1117/12.2655113.short"
+    figure: "/assets/img/paper/conf/credit.jpg"
+    fit: "contain"
+
+  - year: 2022
+    title: "Blockchain Based New E-voting Protocol System Without Trusted Tallying Authorities"
+    authors:
+      - { name: "Khandaker Sajidul Islam" }
+      - { name: "Md Babul Islam", me: "1" }
+      - { name: "Christian Avornu" }
+      - { name: "Jungang Lou" }
+      - { name: "Piyush Kumar Shukla" }
+    journal: "Proceedings of the 2022 Fifth International Conference on Computational Intelligence and Communication Technologies (CCICT)"
+    paper: "https://ieeexplore.ieee.org/document/9913578"
+    code: "https://ieeexplore.ieee.org/document/9913578"
+    slides: ""
+    videos: ""
+    dataset: "https://ieeexplore.ieee.org/document/9913578"
+    figure: "/assets/img/paper/conf/blockchain.jpg"
+    fit: "contain"
+
+  - year: 2022
+    title: "Twitter Opinion Mining on COVID-19 Vaccinations by Machine Learning Presence"
+    authors:
+      - { name: "Md Babul Islam", me: "1" }
+      - { name: "Hasibunnahar Swarna" }
+      - { name: "Piyush Kumar Shukla" }
+      - { name: "Prashant Kumar Shukla" }
+      - { name: "Paresh Rawat" }
+      - { name: "Jyoti Dange" }
+    journal: "Proceedings of the Third Doctoral Symposium on Computational Intelligence (DoSCI 2022)"
+    paper: "https://link.springer.com/chapter/10.1007/978-981-19-3148-2_4"
+    code: "https://link.springer.com/chapter/10.1007/978-981-19-3148-2_4"
+    slides: ""
+    videos: ""
+    dataset: "https://link.springer.com/chapter/10.1007/978-981-19-3148-2_4"
+    figure: "/assets/img/paper/conf/twitter.jpg"
+    fit: "contain"
+
+thesis:
+  - title: "AI Driven Predictive Approaches in Smart Environment: From Smart Buildings🏢 to Smart Agriculture"
+    description: "PhD thesis (Submitted), October 2025, University of Calabria."
+    year: 2025
+    paper: ""
+    figure: "/assets/img/paper/conf/PhD-thesis.jpg"
+    fit: "contain"

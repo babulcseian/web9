@@ -1,0 +1,275 @@
+---
+layout: default
+---
+
+<!--
+  HOME PAGE
+  =========
+  To update your profile photo: replace the image file at
+    assets/img/Babul.jpg
+  (or change the src on line ~130 to point to any other filename)
+
+  To update memory photos: edit the src paths in the "Memories" section below.
+  All image files are in assets/img/ — use dash-separated names, no spaces.
+  e.g. "Md-Babul-Con.jpg" not "Md Babul Con.jpg"
+-->
+
+<style>
+/* ── Hero: two-column profile layout ─────────────── */
+.hero{display:grid;grid-template-columns:200px 1fr;gap:2.5rem;
+  align-items:start;margin-bottom:2.5rem}
+.hero-photo-wrap{display:flex;flex-direction:column;align-items:center;gap:.9rem}
+.hero-photo{width:200px;height:200px;border-radius:50%;object-fit:cover;
+  border:4px solid var(--teal-light);
+  box-shadow:0 8px 32px rgba(13,148,136,.18);
+  transition:transform .3s,box-shadow .3s}
+.hero-photo:hover{transform:scale(1.03);
+  box-shadow:0 16px 40px rgba(13,148,136,.28)}
+.hero-social{display:flex;flex-wrap:wrap;justify-content:center;gap:.45rem}
+.hero-social a{display:inline-flex;align-items:center;justify-content:center;
+  width:36px;height:36px;border-radius:50%;
+  background:#f1fafb;border:1px solid var(--teal-light);
+  color:var(--teal);font-size:1rem;text-decoration:none;
+  transition:background .15s,transform .15s}
+.hero-social a:hover{background:var(--teal);color:#fff;transform:translateY(-2px)}
+
+.hero-bio{}
+.hero-name{font-size:1.9rem;font-weight:900;color:#0f172a;margin:0 0 .15rem;line-height:1.2}
+.hero-role{font-size:1rem;color:var(--teal);font-weight:700;margin-bottom:.9rem}
+.hero-bio p{font-size:.97rem;color:#334155;line-height:1.7;margin:.5rem 0;text-align:justify}
+.hero-bio a{color:var(--teal);font-weight:600;text-decoration:none;border-bottom:1px solid var(--teal-light)}
+.hero-bio a:hover{color:#0f766e}
+
+/* Research interest tags */
+.interest-tags{display:flex;flex-wrap:wrap;gap:.4rem;margin:.7rem 0}
+.i-tag{padding:.28rem .7rem;border-radius:999px;font-size:.78rem;font-weight:700;
+  background:#f0fdfa;border:1px solid var(--teal-light);color:var(--teal)}
+
+/* Thesis highlight box */
+.thesis-box{margin:.9rem 0;padding:.75rem 1rem;border-radius:10px;
+  background:linear-gradient(135deg,#f0fdfa,#ecfdf5);
+  border-left:4px solid var(--teal);font-size:.93rem}
+.thesis-box .t-label{font-weight:900;color:#0f766e;margin-bottom:.25rem}
+.thesis-box .t-title{color:#1e293b;font-style:italic;line-height:1.5}
+
+/* Current project ticker */
+.ticker{display:flex;align-items:center;gap:.5rem;font-size:.85rem;
+  color:#64748b;margin:.5rem 0;padding:.45rem .75rem;
+  border-radius:8px;background:#f8fafc;border:1px solid #e2e8f0}
+.ticker-dot{width:8px;height:8px;border-radius:50%;
+  background:var(--teal);animation:pulse 1.8s infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.85)}}
+
+/* Project quick links */
+.proj-links{display:flex;flex-wrap:wrap;gap:.5rem;margin:.6rem 0}
+.proj-link{display:inline-flex;align-items:center;gap:.35rem;
+  padding:.35rem .75rem;border-radius:8px;font-size:.83rem;font-weight:700;
+  background:#f8fafc;border:1px solid #e2e8f0;color:#475569;text-decoration:none;
+  transition:all .15s}
+.proj-link:hover{background:#f0fdfa;border-color:var(--teal-light);color:var(--teal)}
+
+/* Services teaser */
+.services-teaser{display:flex;align-items:center;justify-content:center;
+  gap:.75rem;padding:.9rem 1.5rem;margin:1.6rem 0;border-radius:14px;
+  background:linear-gradient(135deg,#0f766e,#0d9488);
+  box-shadow:0 6px 20px rgba(13,148,136,.25);cursor:pointer;text-decoration:none}
+.services-teaser:hover{box-shadow:0 10px 28px rgba(13,148,136,.35);
+  transform:translateY(-1px)}
+.services-teaser span{color:#fff;font-weight:800;font-size:.95rem}
+.services-chip{padding:.22rem .6rem;border-radius:999px;
+  background:rgba(255,255,255,.2);color:#fff;font-size:.78rem;font-weight:700}
+
+/* Memories grid */
+.memories-section{margin:2rem 0}
+.memories-title{font-size:1rem;font-weight:800;color:#0f172a;margin-bottom:.9rem;
+  display:flex;align-items:center;gap:.4rem}
+.memories-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:10px;
+}
+.mem-tile{
+  border-radius:12px;overflow:hidden;position:relative;
+  height:180px;background:#f0fdfa;
+}
+.mem-tile.mem-wide{grid-column:span 2;height:200px}
+.mem-tile img{
+  width:100% !important;height:100% !important;
+  object-fit:cover !important;object-position:center top;
+  display:block;transition:transform .35s;
+}
+.mem-tile:hover img{transform:scale(1.04)}
+.mem-tile::after{content:"";position:absolute;inset:0;
+  background:linear-gradient(to top,rgba(15,23,42,.2),transparent);
+  opacity:0;transition:opacity .25s;pointer-events:none}
+.mem-tile:hover::after{opacity:1}
+
+/* ── Responsive ── */
+@media(max-width:680px){
+  .hero{grid-template-columns:1fr;gap:1.5rem}
+  .hero-photo-wrap{flex-direction:row;align-items:center;gap:1.2rem}
+  .hero-photo{width:100px;height:100px}
+  .hero-name{font-size:1.4rem}
+  .memories-grid{grid-template-columns:repeat(2,1fr)}
+  .mem-tile{height:130px}
+  .mem-tile.mem-wide{grid-column:span 2;height:140px}
+}
+</style>
+
+<!-- ── HERO ─────────────────────────────────────── -->
+<div class="hero">
+
+  <!-- Left column: photo + social links -->
+  <div class="hero-photo-wrap">
+    <!--
+      PROFILE PHOTO: change the src below to your photo filename.
+      File must be in assets/img/ with NO SPACES in the name.
+      e.g. src="{{ '/assets/img/your-photo.jpg' | relative_url }}"
+    -->
+    <img class="hero-photo"
+         src="{{ '/assets/img/Babul.jpg' | relative_url }}"
+         alt="Md Babul Islam"
+         onerror="this.style.opacity='0.3'">
+
+    <!-- Social icons — edit the href values in settings.yml or directly here -->
+    <div class="hero-social">
+      <a href="https://scholar.google.com/citations?user=Zaf5EhQAAAAJ" target="_blank" title="Google Scholar">
+        <i class="ai ai-google-scholar"></i></a>
+      <a href="https://github.com/babulcseian" target="_blank" title="GitHub">
+        <i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/babulcseian/" target="_blank" title="LinkedIn">
+        <i class="fab fa-linkedin"></i></a>
+      <a href="https://orcid.org/0000-0003-1054-3036" target="_blank" title="ORCID">
+        <i class="fab fa-orcid"></i></a>
+      <a href="https://www.webofscience.com/wos/author/record/AFA-6874-2022" target="_blank" title="Web of Science">
+        <i class="ai ai-clarivate"></i></a>
+      <a href="{{ site.github.url }}/publications/Md_Babul_Islam_CV_2023.pdf" target="_blank" title="Download CV">
+        <i class="fas fa-file-alt"></i></a>
+    </div>
+  </div>
+
+  <!-- Right column: bio -->
+  <div class="hero-bio">
+    <h1 class="hero-name">Md Babul Islam</h1>
+    <div class="hero-role">Ph.D. Scholar · University of Calabria &amp; University College Dublin</div>
+
+    <p>A research enthusiast who completed his Ph.D. with a fully funded scholarship at the School of ICT,
+      <a href="https://dottorato.dimes.unical.it/students/md-babul-islam">University of Calabria (Italy)</a>,
+      and <a href="https://www.ucd.ie/">University College Dublin (Ireland)</a>.
+      He holds an M.Sc. in Information Engineering from Huzhou University, China, and a B.Sc. in Computer Science
+      and Engineering from City University, Bangladesh.</p>
+
+    <p>He gained valuable experience as a lecturer at the Micro Institute of Technology (2018–2019) and later
+      as a data scientist at Zhejiang Seating Technology in China. His research sits at the intersection of
+      <strong>TinyML</strong>, <strong>Edge AI</strong>, <strong>Digital Twins</strong>, <strong>Smart Buildings</strong>,
+      and <strong>Smart Agriculture</strong>.</p>
+
+    <div class="interest-tags">
+      <span class="i-tag">🧠 TinyML</span>
+      <span class="i-tag">🤖 Applied Deep Learning</span>
+      <span class="i-tag">⚡ IoT Energy Efficiency</span>
+      <span class="i-tag">🏢 Smart Buildings</span>
+      <span class="i-tag">🌱 Smart Agriculture</span>
+      <span class="i-tag">🏥 AI Healthcare</span>
+      <span class="i-tag">🔗 Federated Learning</span>
+    </div>
+
+    <div class="thesis-box">
+      <div class="t-label">🎓 PhD Thesis</div>
+      <div class="t-title">"AI Driven Predictive Approaches in Smart Environment:
+        From Smart Buildings to Smart Agriculture"</div>
+    </div>
+
+    <div class="ticker">
+      <span class="ticker-dot"></span>
+      <strong>Current Project:</strong> Tiny Federated Learning in Smart Buildings 🏢
+    </div>
+
+    <p style="font-size:.9rem;color:#475569;margin:.4rem 0 .3rem">
+      Supervisors:
+      <a href="https://www.icar.cnr.it/persone/guerrieri/">Dr. Antonio Guerrieri</a>,
+      Raffaele Gravina,
+      <a href="https://people.ucd.ie/declan.delaney">Declan Delaney</a>,
+      Giancarlo Fortino
+    </p>
+    <p style="font-size:.9rem;color:#475569;margin:.3rem 0">
+      Future dream: <a href="https://babulcseian.github.io/lab">Applied Bahari Big Data Research House</a>
+    </p>
+
+    <div class="proj-links">
+      <a class="proj-link" href="https://github.com/babulcseian/babulcseian.github.io/blob/main/PhD%20Dataset/readme.md"
+         target="_blank">📦 Dataset &amp; Code</a>
+      <a class="proj-link" href="https://babulcseian.github.io/soil_sensors_data/"
+         target="_blank">🌱 Soil Sensors Project</a>
+      <a class="proj-link" href="{{ site.github.url }}/publications">📄 Publications</a>
+    </div>
+  </div>
+</div><!-- /hero -->
+
+<!-- ── SERVICES TEASER ── -->
+<a class="services-teaser" href="{{ site.github.url }}/services">
+  <span>👨‍💻 Babul's Services</span>
+  <span class="services-chip">Journal Reviewer</span>
+  <span class="services-chip">PC Member</span>
+  <span class="services-chip">Research Collaboration</span>
+</a>
+
+<!-- ── MEMORIES ────────────────────────────────────
+  HOW TO UPDATE PHOTOS:
+  1. Copy your photo into assets/img/ — filename must have NO SPACES
+     Good: "conference-italy-2024.jpg"   Bad: "my photo.jpg"
+  2. Add or replace a <div class="mem-tile"> block below
+  3. Set alt="" to describe the photo
+  The grid auto-adjusts to any number of tiles.
+──────────────────────────────────────────────────── -->
+<div class="memories-section">
+  <div class="memories-title">📸 Some Memories</div>
+  <div class="memories-grid">
+
+    <div class="mem-tile mem-wide">
+      <img src="{{ '/assets/img/Md-Babul-Islalam-Group.jpg' | relative_url }}"
+           alt="Group photo" loading="lazy"
+           onerror="this.parentElement.style.display='none'">
+    </div>
+
+    <div class="mem-tile">
+      <img src="{{ '/assets/img/Md-Babul-Con.jpg' | relative_url }}"
+           alt="Conference" loading="lazy"
+           onerror="this.parentElement.style.display='none'">
+    </div>
+
+    <div class="mem-tile">
+      <img src="{{ '/assets/img/ISLAM-MD-BABUL.jpg' | relative_url }}"
+           alt="Graduation" loading="lazy"
+           onerror="this.parentElement.style.display='none'">
+    </div>
+
+    <div class="mem-tile mem-wide">
+      <img src="{{ '/assets/img/Unical-and-CNR.jpg' | relative_url }}"
+           alt="UNICAL and CNR" loading="lazy"
+           onerror="this.parentElement.style.display='none'">
+    </div>
+
+    <div class="mem-tile">
+      <img src="{{ '/assets/img/Md-Babul-Islam-with-Prof.jpg' | relative_url }}"
+           alt="With Professor" loading="lazy"
+           onerror="this.parentElement.style.display='none'">
+    </div>
+
+    <div class="mem-tile">
+      <img src="{{ '/assets/img/Md-Babul-Islam-Lab.jpg' | relative_url }}"
+           alt="Lab" loading="lazy"
+           onerror="this.parentElement.style.display='none'">
+    </div>
+
+    <div class="mem-tile">
+      <img src="{{ '/assets/img/Babul-Mosabber.jpg' | relative_url }}"
+           alt="With colleague" loading="lazy"
+           onerror="this.parentElement.style.display='none'">
+    </div>
+
+  </div>
+</div>
+
+<!-- ── LATEST NEWS ── -->
+{% include news.html %}
