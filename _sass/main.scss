@@ -1,0 +1,185 @@
+/* ══════════════════════════════════════════════════
+   BABUL'S ACADEMIC SITE — GLOBAL STYLES
+   Inspired by Jun Li's clean teal aesthetic
+   ══════════════════════════════════════════════════ */
+
+/* ── CSS Custom Properties (edit these to retheme) ── */
+:root {
+  --teal:       #0d9488;   /* primary teal */
+  --teal-dark:  #0f766e;   /* hover / darker teal */
+  --teal-light: #99f6e4;   /* border / soft teal */
+  --teal-bg:    #f0fdfa;   /* very light teal background */
+  --ink:        #0f172a;   /* headings */
+  --body:       #334155;   /* body text */
+  --muted:      #64748b;   /* secondary text */
+  --border:     #e2e8f0;   /* subtle borders */
+  --card-bg:    #ffffff;
+  --page-bg:    #ffffff;
+  --radius:     12px;
+}
+
+/* ── Base ── */
+html { overflow-x: hidden; }
+
+body {
+  background: var(--page-bg);
+  color: var(--body);
+  font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+               Roboto, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+img { max-width: 100%; height: auto; }
+.mem-tile img { height: 100% !important; max-width: 100%; }
+.hero-photo { height: 200px !important; width: 200px !important; object-fit: cover; }
+
+marquee {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* ── Links ── */
+a {
+  color: var(--teal);
+  text-decoration: none;
+  transition: color .15s;
+}
+a:hover { color: var(--teal-dark); }
+
+body a.other {
+  color: var(--teal);
+  text-decoration: none;
+  border-bottom: 1px solid var(--teal-light);
+}
+body a.other:hover { color: var(--teal-dark); }
+
+body a.title {
+  color: var(--ink);
+  text-decoration: none;
+}
+
+body a.paper, body a.pdf {
+  color: var(--teal);
+  font-weight: 700;
+}
+
+/* ── Section titles ── */
+h1,h2,h3,h4,h5,h6 { color: var(--ink); font-weight: 800; }
+
+.section-title {
+  font-size: 1.2rem;
+  font-weight: 900;
+  color: var(--ink);
+  border-bottom: 2px solid var(--border);
+  padding-bottom: .5rem;
+  margin-bottom: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+}
+.section-title::before {
+  content: "";
+  display: inline-block;
+  width: 4px;
+  height: 1rem;
+  border-radius: 2px;
+  background: var(--teal);
+}
+
+/* ── Navbar override (keeps header.html gradient but tweaks font) ── */
+.site-nav .brand-name { letter-spacing: -.02em; }
+
+/* ── Cards (shared base for news + pub cards) ── */
+.card-base {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: 0 2px 12px rgba(0,0,0,.04);
+  transition: transform .18s, box-shadow .18s, border-color .18s;
+}
+.card-base:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(0,0,0,.09);
+  border-color: var(--teal-light);
+}
+
+/* ── Buttons / chips (global fallback) ── */
+.btn-teal {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  padding: .45rem .9rem;
+  border-radius: 999px;
+  background: var(--teal);
+  color: #fff;
+  font-weight: 700;
+  font-size: .88rem;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: background .15s, transform .12s, box-shadow .12s;
+}
+.btn-teal:hover {
+  background: var(--teal-dark);
+  color: #fff;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 14px rgba(13,148,136,.3);
+}
+
+/* ── Publication page: colour accents via teal ── */
+.b-journal  { background: var(--teal-bg) !important; border-color: var(--teal-light) !important; color: var(--teal-dark) !important; }
+.pub-card::before { background: var(--teal) !important; }
+.pub-year-label::before { background: var(--teal) !important; }
+
+/* ── News page: timeline colors handled in news.html include ── */
+
+/* ── Footer ── */
+footer { color: var(--muted); font-size: .85rem; }
+
+/* ── Mobile ── */
+@media (max-width: 680px) {
+  body { font-size: 15px; }
+
+  .hero-photo { width: 100px !important; height: 100px !important; }
+
+  #rc-tabs .row {
+    grid-template-columns: 1fr !important;
+    gap: 4px !important;
+  }
+}
+
+/* ── Memories gallery ── */
+.memories-section{margin:2rem 0}
+.memories-title{font-size:1rem;font-weight:800;color:#0f172a;margin-bottom:.9rem;
+  display:flex;align-items:center;gap:.4rem}
+.memories-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  grid-template-rows:auto;
+  gap:10px
+}
+/* A "wide" tile spans 2 columns */
+.mem-tile{border-radius:12px;overflow:hidden;position:relative;height:180px}
+.mem-tile.mem-wide{grid-column:span 2;height:200px}
+.mem-tile img{
+  width:100%;height:100%;
+  object-fit:cover;object-position:center top;
+  display:block;transition:transform .35s
+}
+.mem-tile:hover img{transform:scale(1.04)}
+.mem-tile::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(to top,rgba(15,23,42,.22),transparent);
+  opacity:0;transition:opacity .25s;pointer-events:none
+}
+.mem-tile:hover::after{opacity:1}
+@media(max-width:680px){
+  .memories-grid{grid-template-columns:repeat(2,1fr)}
+  .mem-tile{height:130px}
+  .mem-tile.mem-wide{grid-column:span 2;height:140px}
+}
